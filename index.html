@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Account Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <h1>Unified Bank</h1>
+        <p class="header-text">Your Trusted Financial Partner</p>
+      </div>
+      <div class="dark-mode-toggle">
+        <!-- Dark mode switch -->
+        <label for="dark-mode-switch">Dark Mode</label>
+        <input type="checkbox" id="dark-mode-switch" />
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="account-info">
+        <h2>Account Information</h2>
+        <p id="acc-holder"><strong>Account Holder:</strong> John Doe</p>
+        <p id="acc-type"><strong>Account Type:</strong> Savings</p>
+        <p id="acc-balance"><strong>Balance:</strong> $1000.00</p>
+      </div>
+      <div class="actions">
+        <h2>Actions</h2>
+        <label for="action">Select Action:</label>
+        <select id="action">
+          <option value="deposit">Deposit</option>
+          <option value="withdraw">Withdraw</option>
+          <option value="checkBalance">Check Balance</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <button id="action-button">Submit</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

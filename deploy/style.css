@@ -1,0 +1,158 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color and set font styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header section */
+header {
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.account-info {
+  text-align: start;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  color: #333;
+}
+.account-info p {
+  margin-bottom: 10px; /* You can adjust the value as needed */
+}
+
+.actions {
+  text-align: start;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Dark mode styles for account information cards */
+.dark-mode .account-info {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Dark mode styles for action cards */
+.dark-mode .actions {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  width: 96%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+.dark-mode input[type="number"],
+.dark-mode select {
+  background-color: rgba(22, 22, 29, 0.87);
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.dark-mode input[type="number"]::placeholder,
+.dark-mode select::placeholder {
+  color: #ccc;
+}
+
+.dark-mode input[type="number"]:focus,
+.dark-mode select:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the footer section (optional) */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Add dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the dark mode switch */
+header input[type="checkbox"] {
+  transform: scale(1.5); /* Increase the size of the switch */
+}
