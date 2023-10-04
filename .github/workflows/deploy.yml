@@ -1,4 +1,11 @@
-name: Deploy to Netlify
+- name: Deploy to Netlify
+  run: |
+    echo "Starting Netlify deployment..."
+    netlify login -i $NETLIFY_AUTH_TOKEN
+    cd deploy
+    netlify deploy --prod --site ${{ secrets.NETLIFY_SITE_NAME }}
+  working-directory: ${{ github.workspace }}/deploy
+
 
 on:
   push:
