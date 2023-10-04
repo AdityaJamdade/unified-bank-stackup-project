@@ -13,10 +13,19 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name: Copy Files to Deploy Directory
+      run: |
+        cp index.html deploy/index.html
+        cp style.css deploy/style.css
+        cp script.js deploy/script.js
+      working-directory: ${{ github.workspace }}
+
     - name: Install Netlify CLI
       run: npm install -g netlify-cli
 
     - name: Deploy to Netlify
       run: |
         netlify login -i $NETLIFY_AUTH_TOKEN
+        cd deploy
         netlify deploy --prod
+      working-directory: ${{ github.workspace }}/deploy
