@@ -15,9 +15,7 @@ jobs:
 
     - name: Copy Files to Deploy Directory
       run: |
-        cp index.html deploy/index.html
-        cp style.css deploy/style.css
-        cp script.js deploy/script.js
+        rsync -a --delete main/ deploy/
       working-directory: ${{ github.workspace }}
 
     - name: Install Netlify CLI
