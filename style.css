@@ -156,8 +156,3 @@ footer {
 header input[type="checkbox"] {
   transform: scale(1.5); /* Increase the size of the switch */
 }
-
-/* below lines are just added for fun and should be reverted back */
-body{
-  background-color: darkcyan;
-}
